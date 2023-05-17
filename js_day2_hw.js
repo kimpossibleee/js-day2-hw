@@ -150,8 +150,7 @@ const iterateThroughList = function(anyList) {
         }
     }
 }
-
-console.log(iterateThroughList(hwPerson));
+iterateThroughList(hwPerson);
 /*
 Question 3:
 
@@ -238,7 +237,44 @@ Complete 3 Codewars problems using JavaScript, start with ones you have already 
 
 1: https://www.codewars.com/kata/550f22f4d758534c1100025a
 
+const opposite = {
+  'NORTH': 'SOUTH',
+  'EAST': 'WEST',
+  'SOUTH': 'NORTH',
+  'WEST': 'EAST'
+};
+
+function dirReduc(plan) {
+  const new_plan = [];
+  for (const d of plan) {
+    if (new_plan.length > 0 && new_plan[new_plan.length - 1] === opposite[d]) {
+      new_plan.pop();
+    } else {
+      new_plan.push(d);
+    }
+  }
+  return new_plan;
+}
+
 2: https://www.codewars.com/kata/514b92a657cdc65150000006
+
+function solution(number) {
+  let sum = 0;
+  for (let x = 0; x < number; x++) {
+    if (x % 3 === 0 || x % 5 === 0) {
+      sum += x;
+    }
+  }
+  return sum;
+}
 
 3: https://www.codewars.com/kata/52685f7382004e774f0001f7
 */
+
+// function makeReadable(s) {
+//   const hours = Math.floor(s / 3600);
+//   const minutes = Math.floor((s % 3600) / 60);
+//   const seconds = s % 60;
+
+//   return `${twoDigitFormat(hours)}:${twoDigitFormat(minutes)}:${twoDigitFormat(seconds)}`;
+// }
